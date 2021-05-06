@@ -1,6 +1,5 @@
 package C19434966;
 
-import processing.core.PConstants;
 
 public class Menu {
         MyVisuals mm;
@@ -10,9 +9,9 @@ public class Menu {
     }
 
     public void render() {
-        mm.textSize(50);
-        mm.fill(0, 255, 255);
-        mm.text("This is my music visualizer", 500, 100);
+        mm.textSize(50); //Text size
+        mm.fill(0, 255, 255); //Colour of the text
+        mm.text("This is my music visualizer", 500, 100); //The message
         mm.fill(233, 255, 120);
         mm.text("Programmed by Dylan Heathcote, C19434966", 500, 200);
         mm.fill(175, 255, 255);

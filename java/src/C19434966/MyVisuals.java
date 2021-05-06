@@ -1,22 +1,18 @@
 package C19434966;
 
-
 import ie.tudublin.*;
 
 public class MyVisuals extends Visual {
 
     boolean cube = false;
     boolean turning = false;
-    boolean circles = false;
     boolean menu = true;
-
-
+    boolean pyramids = false;
 
     CubesVisual cv;
     TurningCube tc;
-    Circles cc;
     Menu mm;
-
+    Pyramids pp;
 
     int which = 0;
 
@@ -34,10 +30,9 @@ public class MyVisuals extends Visual {
 
             tc = new TurningCube(this);
             cv = new CubesVisual(this);
-            cc = new Circles(this);
             mm = new Menu(this);
+            pp = new Pyramids(this);
         }
-
 
         public void keyPressed()
         {
@@ -58,13 +53,14 @@ public class MyVisuals extends Visual {
                 menu = ! menu;
                 turning = false;
                 cube = false;
-                circles = false;
+                pyramids = false;
             }
             if (key == '1')
             {
                 cube = ! cube;
                 turning = false;
                 menu = false;
+                pyramids = false;
 
             }
             if( key == '2')
@@ -72,18 +68,16 @@ public class MyVisuals extends Visual {
                 turning = ! turning;
                 cube = false;
                 menu = false;
+                pyramids = false;
             }
-            if ( key == '3')
+            if( key == '3')
             {
-                circles = ! circles;
-                turning = false;
+                pyramids = ! pyramids;
                 cube = false;
                 menu = false;
+                turning = false;
             }
-            if( key == '4')
-            {
-                cube = ! cube;
-            }
+
         }
 
         public void draw()
@@ -105,10 +99,11 @@ public class MyVisuals extends Visual {
             {
                 tc.render();
             }
-            if(circles)
+            if(pyramids)
             {
-                cc.render();
+                pp.render();
             }
+
 
         }
     }
