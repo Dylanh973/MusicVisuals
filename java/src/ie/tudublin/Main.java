@@ -1,6 +1,9 @@
 package ie.tudublin;
 
 import C19434966.*;
+import example.AudioBandsVisual;
+import example.*;
+
 
 public class Main
 {	
