@@ -14,9 +14,6 @@ public class MyVisuals extends Visual {
     Menu mm;
     Pyramids pp;
 
-    int which = 0;
-
-
         public void settings() {
             size(1800, 1050, P3D);
         }
@@ -83,7 +80,6 @@ public class MyVisuals extends Visual {
         public void draw()
         {
             calculateAverageAmplitude();   
-            calculateFrequencyBands(); 
 
             background(0);
             if(menu)
@@ -99,6 +95,7 @@ public class MyVisuals extends Visual {
             {
                 tc.render();
             }
+            
             if(pyramids)
             {
                 pp.render();

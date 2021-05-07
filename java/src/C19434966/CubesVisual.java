@@ -33,7 +33,7 @@ public class CubesVisual {
             mv.stroke(PApplet.map(mv.getSmoothedAmplitude()*2, 0, 1, 0, 255), 255, 255); //Changes the lines and borders in relation to the Amplitude
             angle += 0.02f; //How fast it changes the angle to spin
             mv.box(200); //Box size1
-            mv.sphere(150/2 * mv.getSmoothedAmplitude() * 10); //Declaring the sphere to half the size of the box to make sure it will fit inside
+            mv.sphere(150/2 * mv.getSmoothedAmplitude() * 5); //Declaring the sphere to half the size of the box to make sure it will fit inside
             cube += 0.3;
             mv.popMatrix(); 
 
@@ -49,7 +49,7 @@ public class CubesVisual {
             mv.stroke(PApplet.map(mv.getSmoothedAmplitude()*2, 0, 1, 0, 255), 255, 255);
             angle += 0.02f;
             mv.box(200);
-            mv.sphere(150/2 * mv.getSmoothedAmplitude() * 10);
+            mv.sphere(150/2 * mv.getSmoothedAmplitude() * 5);
             cube1 -= 0.3;
             mv.popMatrix();
 
@@ -83,15 +83,15 @@ public class CubesVisual {
             angle += 0.01f;
             mv.translate(200, 200, 0);
             mv.strokeWeight(1);
-            mv.sphere(40 * mv.getSmoothedAmplitude() * 15);
+            mv.sphere(40 * mv.getSmoothedAmplitude() * 7);
             mv.translate(-100, -100, 0);
-            mv.sphere(40 * mv.getSmoothedAmplitude() * 15);
+            mv.sphere(40 * mv.getSmoothedAmplitude() * 7);
             mv.translate(-200, -200, 0);
-            mv.sphere(40 * mv.getSmoothedAmplitude() * 15);
+            mv.sphere(40 * mv.getSmoothedAmplitude() * 7);
             mv.translate(100, 100, 0);
-            mv.sphere(40 * mv.getSmoothedAmplitude() * 15);
+            mv.sphere(40 * mv.getSmoothedAmplitude() * 7);
             mv.translate(-200, -200, 0);
-            mv.sphere(40 * mv.getSmoothedAmplitude() * 15);
+            mv.sphere(40 * mv.getSmoothedAmplitude() * 7);
 
             mv.translate(395,-100,0);
             mv.stroke(PApplet.map(mv.getAmplitude()*4, 0, 1, 0, 255), 255, 255);         
@@ -100,7 +100,7 @@ public class CubesVisual {
             mv.ellipse(width / 4, 100, 50 + average * 500, 50 + average * 500); //Circle
 
             mv.translate(-390,400,0);
-            mv.stroke(PApplet.map(mv.getAmplitude()*2, 0, 1, 0, 255), 255, 255);         
+            mv.stroke(PApplet.map(mv.getAmplitude()*4, 0, 1, 0, 255), 255, 255);         
             mv.strokeWeight(1);
             mv.noFill(); 
             mv.ellipse(width / 4, 100, 50 + average * 500, 50 + average * 500); //Making a circle

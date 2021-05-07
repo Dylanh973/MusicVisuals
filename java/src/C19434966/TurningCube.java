@@ -28,17 +28,17 @@ public class TurningCube {
             for (int zo = -OFF_MAX; zo <= OFF_MAX; zo += 30) {
               tc.pushMatrix();
               tc.translate(xo, yo, zo); //Positions of each box when printed
-              tc.rotateX(angle);
+              tc.rotateX(angle); //Rotates boxes
               tc.rotateY(angle);
               tc.rotateZ(angle);
-              tc.stroke(PApplet.map(tc.getSmoothedAmplitude()*13, 0, 1, 0,255), 255, 255);  //Outline of each boxs color in relation to the amplitude
+              tc.stroke(PApplet.map(tc.getAmplitude()*2, 0, 1, 0,255), 255, 255);  //Outline of each boxs color in relation to the amplitude
               tc.strokeWeight(4); //The thickness of the lines
               tc.fill(0, 0, 255); //Filling the inside of the boxes white
               tc.box((float) (15 + (Math.sin(angle1)) * 10)); //Printing each box
               tc.popMatrix();
             }
             angle += 0.00005f; //Declaring the angle to determine what speed it rotates
-            angle1 += 0.00005f;
+            angle1 += 0.00005f; 
 
           }
         }
